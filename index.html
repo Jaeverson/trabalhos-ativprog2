@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <form action="cadastraCliente.php" method="post">
+    <fieldset>
+        <legend>Dados Pessoais</legend>
+        <div>
+        <p><label for="seunome">Nome:</label> 
+            <input minlength="2" maxlength="50" type="text" name="Nome" id="seunome" title="escreva um texto contendo de 2 a 50 caracteres" autofocus required></p>
+        <p><label for="seuemail">E-mail:</label> 
+            <input type="email" name="email" id="seuemail" required></p>
+        <p><label for="seuCPF">CPF:</label> 
+            <input type="text" name="CPF" id="seuCPF" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="digite um cpf válido no formato XXX.XXX.XXX-XX" required></p>
+        <p><label for="suaIdade">Idade:</label> 
+            <input type="number" name="Idade" id="suaIdade" required></p>
+        <p><label for="seutelefone">Telefone:</label> 
+            <input type="tel" name="Telefone" id="seutelefone" required></p>
+        <p><label for="adata">Data de Nascimento:</label> 
+            <input type="date" name="Data" id="adata"></p>
+        <p>Sexo:
+            <input type="radio" name="Sexo" id="seusexomasculino" value="Masculino"> Masculino
+            <input type="radio" name="Sexo" id="seusexofeminino" value="Feminino"> Feminino</p>
+        <p><label for="seuestadocivil">Estado civil:</label> 
+            <select name="estado civil" id="seuestadocivil">
+                        <option value="Solteiro">Solteiro(a)</option>
+                        <option value="Casado">Casado(a)</option>
+                        <option value="Divorciado">Divorciado(a)</option>
+                        <option value="Viúvo">Viúvo(a)</option>
+        </select>
+    </p>
+        <p><label for="suaNacionalidade">Nacionalidade:</label> 
+            <input type="text" name="Nacionalidade" id="suaNacionalidade" value="brasileira" readonly></p>
+
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>Endereço de entrega</legend>
+        <div>
+            <p><label for="seucep">CEP:</label> 
+                <input type="text" name="CEP" id="seucep" required></p>
+            <p><label for="tipodoseulogradouro">Tipo de logradouro:</label> 
+                <select name="tipo de logradouro" id="tipodoseulogradouro" required>
+                <option value="" disabled selected>Selecione</option>
+                <option value="Rua">Rua</option>
+                <option value="Avenida">Avenida</option>
+                <option value="Travessa">Travessa</option>
+                <option value="Praça">Praça</option>
+                <option value="Vila">Vila</option>
+                <option value="Sítio">Sítio</option>
+                </select>
+            </p>
+            <p><label for="seulogradouro">logradouro:</label> 
+                <input type="text" name="logradouro" id="seulogradouro" required></p>
+            <p><label for="seuBairro">Bairro:</label> 
+                <input type="text" name="Bairro" id="seuBairro" required></p>
+            <p><label for="suaCidade">Cidade:</label> 
+                <input type="text" name="Cidade" id="suaCidade" required></p>
+            <p><label for="seuEstado">Estado:</label> 
+                <input type="text" name="Estado" id="seuEstado" required></p>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>Informações adicionais</legend>
+        <div>
+            <p>Interesses:</p>
+            <p><input type="checkbox" name="Interesses" id="algumasinformaçõesadicionais1" value="Filmes"> Filmes
+                <input type="checkbox" name="Interesses" id="algumasinformaçõesadicionais2" value="Informática"> Informática
+                <input type="checkbox" name="Interesses" id="algumasinformaçõesadicionais3" value="Games"> Games
+                <input type="checkbox" name="Interesses" id="algumasinformaçõesadicionais4" value="Livros"> Livros
+                <input type="checkbox" name="Interesses" id="algumasinformaçõesadicionais5" value="Roupas"> Roupas
+            </p>
+            <p><label for="outrasinformações">Informações complementares:</label></p>
+                <textarea name="informações complementares" id="outrasinformações" cols="50" rows="5"></textarea>
+            <p><label for="anexar">Anexar Arquivo:</label></p>
+            <input type="file" name="anexar arquivos" id="anexar">        
+        </div>
+    </fieldset>
+        <p>
+            <input type="submit" value="Enviar">
+        </p>
+        <input type="hidden" name="Formulário" value="Formulário">
+    </form>
+    
+</body>
+</html>
